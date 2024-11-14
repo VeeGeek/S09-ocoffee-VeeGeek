@@ -86,7 +86,6 @@ body {
   .nav-title {
     font-weight: bolder;
     font-size: 25px;
-    font-style: ;
   }
   
   /* Style du bouton de connexion */
@@ -247,8 +246,17 @@ padding-bottom: 10px;
   height: 20%;
   padding: 40px;
   gap: 200px;
-  border: solid ;
 }
+
+#catalog h1 {
+  padding: 4.5rem;
+  background-image: url(../../docs/demande-client/00.assets/coffees/589100954.png);
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  height: 10vh;
+}
+
 
 .menu__item{
   border: 1px solid #ddd;
@@ -262,6 +270,46 @@ padding-bottom: 10px;
   justify-content: space-between;
 }
 
+.menu__item__title--discover, .menu__item__title--seemore {
+  background-color: #6F4E37; 
+    color: white; 
+    border: 1px solid #5B3A29; 
+    border-radius: 5px; 
+    padding: 8px 16px; 
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); 
+}
+
+.catalogue__div__title{
+  color: #6f4f28;
+  cursor: pointer;
+  display: flex;
+margin: 10px 10px;
+font-weight: 1000;
+}
+.catalogue__div__title:hover{
+  color: #64341D; /* Couleur plus chaude pour le survol */
+  padding-bottom: 5px; /* Lien souligné par un changement de padding */
+  border-bottom: 2px solid #64341D; /* Soulignement */
+  cursor: pointer;
+}
+
+.menu__item__title--discover:hover{
+background-color: #5B3A29; 
+transform: scale(1.05); 
+}
+
+.menu__item__title--seemore {
+  padding: 8px 8px; 
+  margin : 10px 50px;
+  font-weight: 900;
+
+}
+
 footer {
   color: #64341D;  /* Couleur inspirée du café */
   text-align: center;
@@ -273,3 +321,37 @@ footer {
 footer p {
   margin: 0;
 }
+
+.img404{
+  width: 10%;
+  height: 5vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 4;
+
+}
+
+.p404{
+font-size: larger;
+font-weight: 2000 ;
+padding: 10px;
+color: #fff;
+font-family:'Arial Narrow Bold', sans-serif;
+}
+
+.main_container404 {
+  display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ height: 100vh;
+}
+
+.body404 {
+  background-image: url(../../docs/demande-client/00.assets/coffees/295432730.png);
+  opacity: 0.5;
+ background-color: #333;
+ z-index: -1;
+}
+  
