@@ -1,3 +1,4 @@
+<%- include('partials/head') %>
 <%- include('partials/header') %>
 
 <main class="catalogue__maincontainer">
@@ -10,73 +11,33 @@
         
         <div class="catalogue__menu">
 
-            <section class="menu__item">
-                <img src="../../docs/demande-client/00.assets/coffees/302932754.png" alt="" class="menu__item__img">
-                <h4 class="menu__item__title">Espresso</h4>
-                <p class="menu__item__description">
-                Café fort et concentré préparé en faisant passer de l'eau chaude à travers du café finement moulu.
-                </p>
-                <p class="menu__item__description">
-                Référence : 100955890
-                </p>
-                <p class="menu__item__description">
-                Caractéristique principale : Corsé
-                </p>
-                <p class="menu__item__description">
-                Disponible : Oui
-                </p>
-                <p class="menu__item__description">
-                Origine : Italie
-                </p>
-                <p class="menu__item__price">
-                    Prix au kilo : 20.99 €
-                </p>
-                <h3 class="menu__item__title--discover">Découvrir</h3>
-            </section>
-
-            <section class="menu__item">
-                <img src="../../docs/demande-client/00.assets/coffees/100955894.png" alt="" class="menu__item__img">
-                <h4 class="menu__item__title">Columbian</h4>
-                <p class="menu__item__description">Café moyennement corsé avec une acidité vive et une saveur riche.</p>
-                <p class="menu__item__description">
-                    Référence : 100955894
+            <% for (const coffee  of coffees) {%>
+                <section class="menu__item">
+                    <img src="/coffees/302932754.png" alt="" class="menu__item__img">
+                    <h4 class="menu__item__title"><%= coffee.name %></h4>
+                    <p class="menu__item__description">
+                   <%= coffee.description %>
                     </p>
                     <p class="menu__item__description">
-                    Caractéristique principale : Acide
+                    <%= coffee.reference %>
                     </p>
                     <p class="menu__item__description">
-                    Disponible : Oui
+                    <%= coffee.caracteristique %>
                     </p>
                     <p class="menu__item__description">
-                    Origine : Italie
+                    <%= coffee.disponible %>
+                    </p>
+                    <p class="menu__item__description">
+                    Origine : <%= coffee.origine %>
                     </p>
                     <p class="menu__item__price">
-                        Prix au kilo : 18.75 €
+                        Prix au kilo : <%= coffee.prix %> €
                     </p>
-                <h3 class="menu__item__title--discover">Découvrir</h3>
-            </section>
+                    <h3 class="menu__item__title--discover">Découvrir</h3>
+                </section>
+    
+                <% } %>
 
-            <section class="menu__item">
-                <img src="../../docs/demande-client/00.assets/coffees/302932754.png" alt="" class="menu__item__img">
-                <h4 class="menu__item__title">Ethiopian Yirgacheffe</h4>
-                <p class="menu__item__description">Réputé pour son arôme floral, son acidité vive et ses notes de saveur citronnée.</p>
-                <p class="menu__item__description">
-                    Référence : 105589090
-                    </p>
-                    <p class="menu__item__description">
-                    Caractéristique principale : Fruité
-                    </p>
-                    <p class="menu__item__description">
-                    Disponible : Oui
-                    </p>
-                    <p class="menu__item__description">
-                    Origine : Ethiopie
-                    </p>
-                    <p class="menu__item__price">
-                        Prix au kilo : 22.50 €
-                    </p>
-                <h3 class="menu__item__title--discover">Découvrir</h3>
-            </section>
         </div>
         <h2 class="menu__item__title--seemore">Voir tout</h2>
     </div>

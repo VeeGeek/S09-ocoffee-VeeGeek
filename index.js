@@ -1,8 +1,8 @@
 import "dotenv/config";
 import express from "express"
-import homerouter from "./app/routeurs/homepagerouteur.js";
+import router from "./app/routeurs/router.js";
 
-// un peu de config
+//config du port
 const PORT = process.env.PORT || 3000;
 
 const app = express();
@@ -12,7 +12,14 @@ app.set("views", "./app/views");
 app.set("view engine", "ejs"); 
 
 //Les routes 
-app.use(homerouter);
+app.use(router);
 
 // servir les fichiers statiques qui sont dans "integration"
-app.use(express.static("integration"));
+app.use(express.static('integration'));
+
+
+app.listen(process.env.PORT, () => {
+    console.log(
+      `Le serveur est mis en route sur le port ${process.env.PORT}`
+    );
+  });

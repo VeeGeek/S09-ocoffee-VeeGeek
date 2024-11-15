@@ -1,4 +1,4 @@
-
+<%- include('partials/head') %>
 <%- include('partials/header') %>
 <main>
     <div class="main_container">
@@ -6,7 +6,7 @@
             <div class="main_container_catalogue_content">
                 <!-- Section image -->
                 <div class="main_container_catalogue_image">
-                    <img src="../../docs/demande-client/00.assets/about.jpg" alt="Catalogue Image">
+                    <img src="/about.jpg" alt="Catalogue Image">
                 </div>
                 
                 <!-- Section texte -->
@@ -23,32 +23,15 @@
         <h2 class="homepage_news_title">Nouveautés</h2>
         <div class="homepage_news">
             
-
-            <div class="homepage_news_products">
-                <h3>Expresso</h3>
-                <p>
-                    Café fort et concentré préparé en faisant passer de l'eau chaude à travers du café finement
-                    moulu.
-                </p>
-                <P class="homepage_news_products_button">Découvrir</p>
-            </div>
-
-            <div class="homepage_news_products">
-                <h3>Columbian</h3>
-                <p>
-                    Café moyennement corsé avec une acidité vive et une saveur riche.
-                </p>
-                <P class="homepage_news_products_button">Découvrir</p>
-            </div>
-
-            <div class="homepage_news_products">
-                <h3>Ethiopian Yirgacheffe</h3>
-                <p>
-                    Réputé pour son arôme floral, son acidité vive et ses notes de saveur citronnée
-                </p>
-                <P class="homepage_news_products_button">Découvrir</p>
-            </div>
-        </div>
+            <% for (const coffee  of coffees) {%>
+                
+                <div class="homepage_news_products">
+                    <h3><%= coffee.nom %></h3>
+                    <p> <%= coffee.description %></p>
+                    <P class="homepage_news_products_button" href="/découvrir/coffeeName">Découvrir</p>
+                        <link rel="stylesheet" href="/découvrir/coffeeName" class="homepage_news_products_button" >
+                </div>
+                <% } %>
     </div>
 </main>
 
