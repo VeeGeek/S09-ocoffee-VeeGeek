@@ -7,14 +7,15 @@
         <h1>Notre catalogue</h1>
     
     <div class="catalogue__div">
-        <h3 class="catalogue__div__title">Categories</h3>
+        <a href="#" class="catalogue__div__title">Categories</a>
+
         
         <div class="catalogue__menu">
 
             <% for (const coffee  of coffees) {%>
                 <section class="menu__item">
                     <img src="/coffees/302932754.png" alt="" class="menu__item__img">
-                    <h4 class="menu__item__title"><%= coffee.name %></h4>
+                    <h4 class="menu__item__title"><%= coffee.nom %></h4>
                     <p class="menu__item__description">
                    <%= coffee.description %>
                     </p>
@@ -33,14 +34,13 @@
                     <p class="menu__item__price">
                         Prix au kilo : <%= coffee.prix %> €
                     </p>
-                    <h3 class="menu__item__title--discover">Découvrir</h3>
+                    <a href="/catalogue/<%= coffee.id %>" class="menu__item__title--discover">Découvrir</a>
                 </section>
     
                 <% } %>
 
         </div>
-        <h2 class="menu__item__title--seemore">Voir tout</h2>
-    </div>
+        <a href="/catalogue/voir" class="menu__item__title--seemore">Voir tout</a>
 </main>
 
 <%- include('partials/footer') %>

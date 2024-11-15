@@ -5,7 +5,7 @@ const homecontroller = {
     homePage : async (req,res) => {
         try {
             const coffees = await dataMapper.getThreeCoffees();
-            console.table(coffees);
+    
             res.render("homepage", { coffees });
         } 
         catch (error) {

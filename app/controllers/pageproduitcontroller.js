@@ -3,12 +3,12 @@ import dataMapper from "../datamapper.js";
 const pageProduitController =  {
     pageProduit: async (req,res) => {
         try {
-        const coffeeName = req.params.coffeeName;
+            const coffeeId = req.params.coffeeId;
 
-        const coffee = await dataMapper.getOneCoffee(coffeeName);
-
-        res.render ("detailproduit", { coffee })
+            const coffee = await dataMapper.getOneCoffee(coffeeId);
+            res.render ("detailproduit", { coffee }) 
         } 
+
         catch (error) {
             res.render("404")  
         }

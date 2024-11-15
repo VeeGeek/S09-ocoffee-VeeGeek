@@ -7,6 +7,7 @@ const router = express.Router();
 
 router.get("/",homecontroller.homePage);
 router.get("/catalogue", cataloguecontroller.cataloguePage);
-router.get("/c/:coffeeName", pageProduitController.pageProduit);
+router.get("/catalogue/voir", cataloguecontroller.voirToutPage);
+router.get("/catalogue/:coffeeId", pageProduitController.pageProduit);
 
 export default router;

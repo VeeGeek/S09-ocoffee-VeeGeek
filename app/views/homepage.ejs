@@ -28,8 +28,7 @@
                 <div class="homepage_news_products">
                     <h3><%= coffee.nom %></h3>
                     <p> <%= coffee.description %></p>
-                    <P class="homepage_news_products_button" href="/découvrir/coffeeName">Découvrir</p>
-                        <link rel="stylesheet" href="/découvrir/coffeeName" class="homepage_news_products_button" >
+                    <a href="/catalogue/<%= coffee.id %>" class="homepage_news_products_button">Découvrir</a>
                 </div>
                 <% } %>
     </div>

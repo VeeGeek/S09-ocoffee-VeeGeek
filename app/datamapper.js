@@ -2,17 +2,17 @@ import client from "./client.js";
 
 const dataMapper = {
 
-  getOneCoffee : async (coffeeName) =>{    
+  getOneCoffee : async (coffeeId) =>{    
 
-const sql = `SELECT * FROM coffee WHERE name = ${coffeeName}`;
+const sql = `SELECT * FROM coffee WHERE id = ${coffeeId};
+`;
 const result = await client.query(sql);
-
-    return result.rows[0];
+return result.rows[0];
 },  
 
 getThreeCoffees : async (coffeeName) =>{    
 
-    const sql = `SELECT * FROM coffee LIMIT 3`;
+    const sql = `SELECT * FROM coffee LIMIT 3;`;
     const result = await client.query(sql);
     
         return result.rows;
@@ -21,7 +21,7 @@ getThreeCoffees : async (coffeeName) =>{
 
 getAllCoffees : async (coffeeName) =>{    
 
-    const sql = `SELECT * FROM coffee`;
+    const sql = `SELECT * FROM coffee;`;
     const result = await client.query(sql);
     return result.rows;
     }    
